@@ -1,0 +1,68 @@
+body {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#initialText {
+    height: 480px; 
+}
+
+#conversation {
+    white-space: pre-wrap;
+    height: 505px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+input[type="password"],
+textarea {
+    border-radius: 4px;
+}
+
+button {
+    border-radius: 4px;
+}
+
+.spinner-border {
+    margin-left: 5px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.user-message, .ai-message {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    border: 1px solid #d4d4d4;
+    clear: both;
+}
+
+.user-message {
+    /*float: right;*/
+}
+
+.ai-message {
+    /*float: left;*/
+}
+
+#conversation br {
+    display: none;
+}
+
+.conversation-timestamp {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+}

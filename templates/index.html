@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简单文本训练模型</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <h1 class="text-center">简单文本训练模型</h1>
+  <p class="text-center"><small>基于Open AI的gpt-3.5-turbo模型</small></p>
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">第一步：初始化设置</h5>
+
+            <!-- API Key Input -->
+            <div class="form-group">
+              <label for="apiKeyInput">请输入您的Open AI API Key:</label>
+              <div>
+                <input type="password" class="form-control d-inline-block" id="apiKeyInput"
+                  placeholder="请输入您的Open AI API Key" style="width: calc(100% - 100px);">
+                <button id="saveApiKeyBtn" class="btn btn-primary d-inline-block">保存</button>
+              </div>
+              <small class="form-text text-muted">您的API Key将被保存在本地浏览器缓存中，不会被发送到服务器。</small>
+            </div>
+            <hr>
+
+            <!-- 初始化文本输入 -->
+            <div class="form-group">
+              <label for="initialText">请输入您要训练的文本内容:</label>
+              <textarea class="form-control" id="initialText" rows="3"></textarea>
+            </div>
+            <div class="text-center">
+              <button id="initializeBtn" class="btn btn-primary">
+                开始训练
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">第二步：围绕训练文本进行对话</h5>
+
+            <div id="conversation" class="mb-3"></div>
+            <div class="form-group">
+              <label for="userMessage">请输入对话内容:</label>
+              <textarea class="form-control" id="userMessage" rows="3"></textarea>
+            </div>
+            <div class="text-center">
+              <button id="chatBtn" class="btn btn-primary">
+                发送
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/js/scripts.js"></script>
+</body>
+
+</html>
